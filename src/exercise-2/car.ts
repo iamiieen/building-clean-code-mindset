@@ -5,9 +5,9 @@ export enum CarType {
 
 export class Car {
   private _name: string;
-  private _type: string;
+  private _type: CarType;
 
-  constructor(name: string, type: string) {
+  constructor(name: string, type: CarType) {
     this._name = name;
     this._type = type;
   }

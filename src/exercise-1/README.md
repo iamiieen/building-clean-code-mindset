@@ -23,15 +23,16 @@ const items = [ { name: "Book", quantity: 11, price: 10 }, { name: "Pen", quanti
 function calculateTotalCost(items) {
   let totalCost = 0;
   for (let i = 0; i < items.length; i++) {
-    let thisAmount = items[i].quantity * items[i].price;
-    // apply 20% discount for quantity more than 10
-    if (items[i].quantity > 10) {
-      thisAmount = thisAmount - thisAmount * 0.2;
-    }
+    // base price - quantity discount + shipping
+    // apply 10% discount for quantity more than 10 items
+    let thisAmount = items[i].quantity * items[i].price - Math.max(0, items[i].quantity - 10) * items[i].price * 0.2 + Math.min(40, items[i].quantity * items[i].price * 0.1);
+    
     totalCost += thisAmount;
   }
-  // apply 10% discount for total cost
-  totalCost = totalCost - totalCost * 0.1;
+  // apply 2% discount for total cost cost is more than 1000
+  if(totalCoast > 1000){
+    totalCost = totalCost - totalCost * 0.02;
+  }
 
   console.log("Total cost : ", totalCost);
   return totalCost;

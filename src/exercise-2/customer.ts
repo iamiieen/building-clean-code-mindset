@@ -21,7 +21,6 @@ export class Customer {
 
   public generateStatementAndSendBill() {
     let totalAmount = 0;
-
     let result = `Bill generated for customer ${this._name} \n`;
     // eslint-disable-next-line @typescript-eslint/prefer-for-of
     for (let i = 0; i < this._rentals.length; i++) {
@@ -32,6 +31,7 @@ export class Customer {
       switch (each.car.type) {
         case CarType.NEW:
           thisAmount += 10;
+          // add 5% discount if rented days more than 5
           if (each.days > 5) {
             thisAmount = thisAmount - thisAmount * 0.05;
           }
