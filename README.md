@@ -13,3 +13,10 @@ This repository is configured to use vite and vitest tools.
    ```shell
    npm run test
    ```
+
+## How to use this repository to Run workshop
+
+1. This repository contains `exercise-{n}` that can run as sprints.
+2. Divide people into teams (ideal team size 2-3 people)
+3. After each exercise host asks one team to volunteer to showcase and discuss how they can make it better.
+4. Rotate pairs after each exercices and update sheet.
