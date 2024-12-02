@@ -14,6 +14,11 @@ This repository is configured to use vite and vitest tools.
    npm run test
    ```
 
+3. Run lint
+   ```shell
+   npm run lint
+   ```
+
 ## How to use this repository to Run workshop
 
 1. This repository contains `exercise-{n}` that can run as sprints.
