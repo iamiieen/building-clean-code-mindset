@@ -1,8 +1,7 @@
 # Exercise - 2
 
-## Task - 1 | Sprint Time - 5 minutes
-
-### As a User I want to change the password and notify user with an email regarding password change on successful update.
+## Task
+## As a new User to platform I want to change the password and notify user with an email regarding password change on successful update.
 
 
 Criteria to change password
@@ -18,16 +17,9 @@ type User = {
     email: string;
     password: string;
 }
-function sendMail(email, message) {
-    // you dont need to write logic here assume this sends a mail
-}
 
 function getUser(email) {
     // you dont need to write logic here assume this returns user or null 
-}
-
-function saveUser(user) {
-    // you dont need to write logic here assume this saves user
 }
 
 function changePassword(email, oldPassword, newPassword){
